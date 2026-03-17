@@ -1,62 +1,17 @@
 public class OOPSBannerApp {
 
-    public static String[] getO() {
-        return new String[]{
-            " OOO ",
-            "O   O",
-            "O   O",
-            "O   O",
-            " OOO "
-        };
-    }
-
-    public static String[] getP() {
-        return new String[]{
-            "PPPP ",
-            "P   P",
-            "PPPP ",
-            "P    ",
-            "P    "
-        };
-    }
-
-    public static String[] getS() {
-        return new String[]{
-            " SSS ",
-            "S    ",
-            " SSS ",
-            "    S",
-            " SSS "
-        };
-    }
-
-    public static String[] getA() {
-        return new String[]{
-            " AAA ",
-            "A   A",
-            "AAAAA",
-            "A   A",
-            "A   A"
-        };
-    }
-
     public static void main(String[] args) {
 
-        String[] O = getO();
-        String[] P = getP();
-        String[] S = getS();
-        String[] A = getA();
+        String[] banner = {
+            String.join("  ", " OOO ", " OOO ", "PPPP ", " SSS ", " AAA ", "PPPP ", "PPPP "),
+            String.join("  ", "O   O", "O   O", "P   P", "S    ", "A   A", "P   P", "P   P"),
+            String.join("  ", "O   O", "O   O", "PPPP ", " SSS ", "AAAAA", "PPPP ", "PPPP "),
+            String.join("  ", "O   O", "O   O", "P    ", "    S", "A   A", "P    ", "P    "),
+            String.join("  ", " OOO ", " OOO ", "P    ", " SSS ", "A   A", "P    ", "P    ")
+        };
 
-        for (int i = 0; i < O.length; i++) {
-            System.out.println(
-                O[i] + "  " + 
-                O[i] + "  " + 
-                P[i] + "  " + 
-                S[i] + "  " +
-                A[i] + "  " +
-                P[i] + "  " +
-                P[i]
-            );
+        for (String line : banner) {
+            System.out.println(line);
         }
     }
 }
